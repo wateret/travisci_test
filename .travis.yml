@@ -1,5 +1,7 @@
-language: ruby
-rvm:
- - 2.2
- - jruby
- - rbx-3
+language: cpp
+
+os: osx
+osx_image: xcode8
+compiler:
+  - clang
+  - gcc
