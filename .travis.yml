@@ -6,6 +6,10 @@ compiler:
   - clang
   - gcc
 
+stages:
+  - build
+  - test
+
 jobs:
   include:
     - stage: build
