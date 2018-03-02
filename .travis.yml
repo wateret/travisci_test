@@ -6,4 +6,9 @@ compiler:
   - clang
   - gcc
 
-script: make && make test
+jobs:
+  include:
+    - stage: build
+      script: make # uses the default stage name "test"
+    - stage: test
+      script: make test
