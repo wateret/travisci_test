@@ -5,13 +5,16 @@ osx_image: xcode8
 compiler:
   - clang
 
+before_install:
+  - ./install_deps.sh
+
 stages:
   - build
   - test
 
 jobs:
   include:
-    - stage: build
-      script: make # uses the default stage name "test"
-    - stage: test
+    - stage:  build
+      script: make
+    - stage:  test
       script: make test
